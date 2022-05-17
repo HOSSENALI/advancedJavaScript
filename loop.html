@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>JavaScript Array.forEach()</h2>
+    <p>Calls a function once for each array element.</p>
+    <h1>forEach Loop</h1>
+    <p id="demo"></p>
+    <h1>forIn Loop</h1>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+
+    <script>
+        const numbers = [45, 4, 9, 16, 25];
+
+        //forEach Loop............................
+        // ARRAY iteration.................
+        let txt = "";
+        numbers.forEach((value, index) => {
+            txt += "index is " + index + " value is " + value + "<br>";
+        });
+        document.getElementById("demo").innerHTML = txt;
+
+
+
+        // forIn Loop.......................................
+
+        // ARRAY+ OBJEXT Iteration....................
+        let number = "";
+        for (let x in numbers) {
+            number += x + " ";
+        }
+        document.getElementById("demo1").innerHTML = number;
+
+
+        // object................
+        const person = { fname: "John", lname: "Doe", age: 25 };
+        let text = "";
+        for (let x in person) {
+            text += person[x] + " ";
+        }
+        document.getElementById("demo2").innerHTML = text;
+
+
+        
+
+        // forOf LOOP.......................
+        const cars = ["BMW", "Volvo", "Mini"];
+
+        let text1 = "";
+        for (let x of cars) {
+            text1 += x;
+        }
+
+        let language = "JavaScript";
+
+        let text2 = "";
+        for (let x of language) {
+            text2 += x;
+        }
+
+
+    </script>
+
+</body>
+
+</html>
